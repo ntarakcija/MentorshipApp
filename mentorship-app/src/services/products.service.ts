@@ -17,7 +17,6 @@ export class ProductsService {
   }
 
   deleteProduct(id: number) {
-    console.log('delete');
     return this.httpClient.delete('https://localhost:5001/api/products/' + id);
   }
 }

@@ -13,9 +13,9 @@ namespace MentorshipAppAPI.Controllers
     {
         List<Product> products = new List<Product>()
         {
-            new Product(1, "Tuna", 2.75, "Tuna in olive oil, too expensive."),
+            new Product(1, "Tuna", 2.75, "Tuna in olive oil."),
             new Product(2, "Apples", 1.75, "Fresh red apples."),
-            new Product(3, "Oranges", 1.45, "Round oranges."),
+            new Product(3, "Oranges", 1.45, "Juicy oranges."),
             new Product(4, "Juice", 2.0, "Fresh apple juice.")
         };
 

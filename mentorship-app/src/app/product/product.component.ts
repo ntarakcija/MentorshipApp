@@ -22,7 +22,7 @@ export class ProductComponent implements OnInit {
   }
 
   delete() {
-    this.addToCartEmitter.emit();
+    this.deleteEmitter.emit();
   }
 
   addToCart() {

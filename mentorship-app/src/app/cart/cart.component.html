@@ -1,7 +1,18 @@
+<div class="row">
+    <div class="col-sm-6">
+        <b>Product</b>
+    </div>
+    <div class="col-sm-3">
+        <b>Count</b>
+    </div>
+    <div class="col-sm-3">
+        <b>Action</b>
+    </div>
+</div>
 <div *ngFor="let product of products" class="row">
     <div class="col-sm-6">{{ product.product.name }}</div>
     <div class="col-sm-3">{{ product.count }}</div>
     <div class="col-sm-3">
-        <a>Remove</a>
+        <a (click)="remove(product.product)">Remove</a>
     </div>
 </div>

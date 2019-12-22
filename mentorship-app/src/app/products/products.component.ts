@@ -18,12 +18,9 @@ export class ProductsComponent implements OnInit {
   }
 
   getProducts() {
-    this.productsService.getProducts().subscribe((data: Product[]) => this.products = data);
-  }
-
-  delete(product: Product) {
-    this.productsService.deleteProduct(product.id);
-    this.getProducts();
+    this.productsService.getProducts().subscribe((data: Product[]) => {
+      this.products = data;
+    });
   }
 
   addToCart(product: Product) {
@@ -37,5 +34,9 @@ export class ProductsComponent implements OnInit {
     } else {
       this.cartProducts[index].count++;
     }
+  }
+
+  removeFromCart(event: Product) {
+    this.cartProducts = this.cartProducts.filter(item => item.product.id !== event.id);
   }
 }
