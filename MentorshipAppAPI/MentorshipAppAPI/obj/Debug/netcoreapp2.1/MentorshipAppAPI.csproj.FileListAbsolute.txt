@@ -1,0 +1,14 @@
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\bin\Debug\netcoreapp2.1\MentorshipAppAPI.deps.json
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\bin\Debug\netcoreapp2.1\MentorshipAppAPI.runtimeconfig.json
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\bin\Debug\netcoreapp2.1\MentorshipAppAPI.runtimeconfig.dev.json
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\bin\Debug\netcoreapp2.1\MentorshipAppAPI.dll
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.csprojAssemblyReference.cache
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.csproj.CoreCompileInputs.cache
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.RazorAssemblyInfo.cache
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.RazorAssemblyInfo.cs
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.AssemblyInfoInputs.cache
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.AssemblyInfo.cs
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.RazorTargetAssemblyInfo.cache
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\bin\Debug\netcoreapp2.1\MentorshipAppAPI.pdb
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.dll
+D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MentorshipAppAPI", "MentorshipAppAPI\MentorshipAppAPI.csproj", "{6A3E4743-B3A8-4A9B-AD94-D1D783985EB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A3E4743-B3A8-4A9B-AD94-D1D783985EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3E4743-B3A8-4A9B-AD94-D1D783985EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3E4743-B3A8-4A9B-AD94-D1D783985EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3E4743-B3A8-4A9B-AD94-D1D783985EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0264E78C-8956-4CEE-8D19-ADCB41D8C9FF}
+	EndGlobalSection
+EndGlobal
