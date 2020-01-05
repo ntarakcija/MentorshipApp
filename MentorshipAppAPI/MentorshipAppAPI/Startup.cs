@@ -42,6 +42,7 @@ namespace MentorshipAppAPI
             services.AddSingleton<IDealsService, DealsService>();
             services.AddSingleton<ICart, Cart>();
             services.AddTransient<IDealsFactory, DealsFactory>();
+            services.AddTransient<ISuperDealsFactory, SuperDealsFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

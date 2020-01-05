@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace MentorshipAppAPI
 {
-    public class DealsFactory : IDealsFactory
+    public class SuperDealsFactory : ISuperDealsFactory
     {
         private readonly IProductsService _productsService;
 
-        public DealsFactory(IProductsService productsService)
+        public SuperDealsFactory(IProductsService productsService)
         {
             _productsService = productsService;
         }
@@ -21,25 +21,25 @@ namespace MentorshipAppAPI
             switch (category)
             {
                 case DealCategory.Christmas:
-                    return CreateChristmasDeal();
+                    return CreateSuperChristmasDeal();
                 case DealCategory.NewYear:
-                    return CreateNewYearDeal();
+                    return CreateSuperNewYearDeal();
                 case DealCategory.Love:
-                    return CreateLoveDeal();
+                    return CreateSuperLoveDeal();
                 default:
                     return new Deal();
             }
         }
 
-        private Deal CreateChristmasDeal()
+        private Deal CreateSuperChristmasDeal()
         {
             List<Product> products = _productsService.GetProducts() as List<Product>;
             List<Product> items = new List<Product>();
-            List<Product> christmasProducts = products.FindAll(item => 
+            List<Product> christmasProducts = products.FindAll(item =>
                 item.Category == ProductCategory.Gift || item.Category == ProductCategory.Clothes);
 
-            // Get three 2 items from christmasProducts
-            for (int i = 0; i < 2; i++)
+            // Get 4 random items from christmasProducts
+            for (int i = 0; i < 4; i++)
             {
                 if (i >= christmasProducts.Count)
                 {
@@ -56,13 +56,13 @@ namespace MentorshipAppAPI
                 Name = "Xmas deal for you",
                 Description = "Surprise your family and friends with this special deal for you.",
                 Items = items,
-                Price = items.Sum(item => item.Price) * 0.9
+                Price = items.Sum(item => item.Price) * 0.7
             };
 
             return deal;
         }
 
-        private Deal CreateNewYearDeal()
+        private Deal CreateSuperNewYearDeal()
         {
             List<Product> products = _productsService.GetProducts() as List<Product>;
             List<Product> items = new List<Product>();
@@ -70,8 +70,8 @@ namespace MentorshipAppAPI
                 item.Category == ProductCategory.Gift || item.Category == ProductCategory.Tech
                 || item.Category == ProductCategory.Love);
 
-            // Get 2 random items from christmasProducts
-            for (int i = 0; i < 2; i++)
+            // Get three 4 items from christmasProducts
+            for (int i = 0; i < 4; i++)
             {
                 if (i >= newYearProducts.Count)
                 {
@@ -88,21 +88,21 @@ namespace MentorshipAppAPI
                 Name = "New Year deal for you",
                 Description = "Surprise your family and friends with this special deal for you.",
                 Items = items,
-                Price = items.Sum(item => item.Price) * 0.9
+                Price = items.Sum(item => item.Price) * 0.7
             };
 
             return deal;
         }
 
-        private Deal CreateLoveDeal()
+        private Deal CreateSuperLoveDeal()
         {
             List<Product> products = _productsService.GetProducts() as List<Product>;
             List<Product> items = new List<Product>();
             List<Product> loveProducts = products.FindAll(item =>
                 item.Category == ProductCategory.Love || item.Category == ProductCategory.Pets);
 
-            // Get 2 random items from christmasProducts
-            for (int i = 0; i < 2; i++)
+            // Get 4 random items from christmasProducts
+            for (int i = 0; i < 4; i++)
             {
                 if (i >= loveProducts.Count)
                 {
@@ -119,7 +119,7 @@ namespace MentorshipAppAPI
                 Name = "Romantic deal for you",
                 Description = "Surprise your special one with this special deal for you.",
                 Items = items,
-                Price = items.Sum(item => item.Price) * 0.9
+                Price = items.Sum(item => item.Price) * 0.7
             };
 
             return deal;
