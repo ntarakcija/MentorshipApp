@@ -1,4 +1,5 @@
-﻿using MentorshipAppAPI.Models;
+﻿using MentorshipAppAPI.DealsFactories;
+using MentorshipAppAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace MentorshipAppAPI
 {
-    public interface IDealsFactory
+    public interface IDealsFactory : IFactory
     {
-        Deal GetDeal(DealCategory category);
     }
 }

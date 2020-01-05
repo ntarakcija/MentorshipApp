@@ -13,4 +13,3 @@ D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2
 D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.RazorTargetAssemblyInfo.cache
 D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.dll
 D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.pdb
-D:\Desktop\MentorshipApp\MentorshipAppAPI\MentorshipAppAPI\obj\Debug\netcoreapp2.1\MentorshipAppAPI.csprojAssemblyReference.cache

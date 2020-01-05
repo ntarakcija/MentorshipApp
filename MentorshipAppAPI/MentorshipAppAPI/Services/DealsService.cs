@@ -9,17 +9,17 @@ namespace MentorshipAppAPI.Services
     public class DealsService : IDealsService
     {
         private List<Deal> _deals;
-        private readonly IDealsFactory _dealsFactory;
+        private readonly IFactoryCreator _factoryCreator;
 
-        public DealsService(IDealsFactory dealsFactory)
+        public DealsService(IFactoryCreator factoryCreator)
         {
             _deals = new List<Deal>();
-            _dealsFactory = dealsFactory;
+            _factoryCreator = factoryCreator;
         }
 
         public void AddDeal(DealCategory category)
         {
-            _deals.Add(_dealsFactory.GetDeal(category));
+            _deals.Add(_factoryCreator.GetFactory().GetDeal(category));
         }
 
         public Deal GetDeal(Guid id)

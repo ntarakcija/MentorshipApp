@@ -1,4 +1,5 @@
-﻿using MentorshipAppAPI.Models;
+﻿using MentorshipAppAPI.DealsFactories;
+using MentorshipAppAPI.Models;
 using MentorshipAppAPI.Services;
 using System;
 using System.Collections.Generic;
