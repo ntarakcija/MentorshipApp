@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MentorshipAppAPI.Services
 {
-    public interface IProductService
+    public interface IDealsService
     {
-        IEnumerable<Product> GetProducts();
-        Product GetProduct(int id);
-        void AddProduct(Product product);
+        IEnumerable<Deal> GetDeals();
+        Deal GetDeal(Guid id);
+        void AddDeal(DealCategory category);
     }
 }

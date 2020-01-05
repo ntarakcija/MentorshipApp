@@ -10,11 +10,13 @@ import { Product } from 'src/models/product.model';
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
   cartProducts: { product: Product, count: number }[] = [];
+  cart: Product[] = [];
 
   constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
     this.getProducts();
+    this.getCart();
   }
 
   getProducts() {
@@ -23,7 +25,25 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  getCart() {
+    this.productsService.getCart().subscribe((data: Product[]) => {
+      this.cart = data;
+    });
+  }
+
   addToCart(product: Product) {
+    this.productsService.addToCart(product.id).subscribe(data => {
+      this.getCart();
+    });
+  }
+
+  removeFromCart(product: Product) {
+    this.productsService.removeFromCart(product.id).subscribe(data => {
+      this.getCart();
+    });
+  }
+
+  /* addToCart(product: Product) {
     const index = this.cartProducts.findIndex(item => item.product.id === product.id);
 
     if (index === -1) {
@@ -38,5 +58,5 @@ export class ProductsComponent implements OnInit {
 
   removeFromCart(event: Product) {
     this.cartProducts = this.cartProducts.filter(item => item.product.id !== event.id);
-  }
+  } */
 }

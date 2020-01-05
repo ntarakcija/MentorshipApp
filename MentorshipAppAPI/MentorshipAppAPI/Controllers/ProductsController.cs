@@ -7,19 +7,55 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MentorshipAppAPI.Controllers
 {
-    [DisableCors()]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductService _productsService = new ProductsService();
+        private readonly IProductsService _productsService;
 
-        public ProductsController()
+        public ProductsController(IProductsService productService)
         {
-           
+           _productsService = productService;
         }
 
-        // GET api/products
+        // GET api/products/cart
+        [HttpGet("cart")]
+        public ActionResult<IEnumerable<Product>> GetCart()
+        {
+            var res = _productsService.GetCartProducts();
+            return Ok(res);
+        }
+
+        // GET api/cart
+        [HttpGet("cart/price")]
+        public ActionResult<IEnumerable<Product>> GetCartPrice()
+        {
+            var res = _productsService.GetCartPrice();
+            return Ok(res);
+        }
+
+        // GET api/cart
+        [HttpGet("cart/discount")]
+        public ActionResult<IEnumerable<Product>> GetCartDiscountPrice()
+        {
+            var res = _productsService.GetCartDiscountPrice();
+            return Ok(res);
+        }
+
+        // POST api/cart
+        [HttpPost("cart/{id}")]
+        public void AddToCart(Guid id)
+        {
+            _productsService.AddToCart(id);
+        }
+
+        // POST api/cart
+        [HttpDelete("cart/{id}")]
+        public void RemoveFromCart(Guid id)
+        {
+            _productsService.RemoveFromCart(id);
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<Product>> Get()
         {
@@ -29,7 +65,7 @@ namespace MentorshipAppAPI.Controllers
 
         // GET api/products/5
         [HttpGet("{id}")]
-        public ActionResult<Product> Get(int id)
+        public ActionResult<Product> Get(Guid id)
         {
             var res = _productsService.GetProduct(id);
             return Ok(res);
@@ -41,5 +77,6 @@ namespace MentorshipAppAPI.Controllers
         {
             _productsService.AddProduct(value);
         }
+
     }
 }

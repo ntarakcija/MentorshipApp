@@ -10,9 +10,25 @@
     </div>
 </div>
 <div *ngFor="let product of products" class="row">
-    <div class="col-sm-6">{{ product.product.name }}</div>
-    <div class="col-sm-3">{{ product.count }}</div>
+    <div class="col-sm-6">{{ product.name }}</div>
+    <!-- <div class="col-sm-3">{{ product.count }}</div> -->
     <div class="col-sm-3">
-        <a (click)="remove(product.product)">Remove</a>
+        <a (click)="remove(product)">Remove</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <button class="btn btn-primary btn-sm" (click)="getPrice()">Get cart price</button>
+    </div>
+    <div *ngIf="price" class="col-xs-6">
+        {{ price }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success btn-sm" (click)="getDiscount()">Get discount price</button>
+    </div>
+    <div *ngIf="discount" class="col-xs-6">
+        {{ discount }}
     </div>
 </div>

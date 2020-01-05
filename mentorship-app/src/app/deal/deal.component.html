@@ -1,0 +1,13 @@
+<div *ngIf="deal" class="card w-100">
+    <div class="card-body">
+        <h5 class="card-title">{{ deal.name }} | {{ deal.price }} $</h5>
+        <p class="card-text">{{ deal.description }}</p>
+        <div *ngIf="deal.items && deal.items.length > 0" class="row">
+            <div *ngFor="let product of deal.items" class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+                <app-product [product]="product">
+                </app-product>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-sm">Add to cart</button>
+    </div>
+</div>
